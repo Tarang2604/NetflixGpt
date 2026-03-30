@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# NetflixGpt
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ Create an app using npm create -react-app 
+  Configure TailwindCSS
+- Header
+- Login Form
+- Sign Up Form
 
-## Available Scripts
+# Features
+- Login/SignUp 
+  - Sign In/ Sign Up Form 
+  - Redirect to Browser Page
+-Browser(after authentication )
+ -Header 
+ - Main Movie
+  -Tailer in Background    
+  - Title & description 
+  - Movie Subscription 
+     - MovieSuggestion
+       -MovieLists  
 
-In the project directory, you can run:
+-NetflixGPT
+  - Search Bar
+  - Movie Suggestions
+.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+import React from "react";
+import Header from './Header'
+const Login =()=>{
+  return (
+    <div className="relative w-full h-screen ">
+      <Header/>
+      <div className='absolute'>
+        <img src="https://assets.nflxext.com/ffe/siteui/vlv3/5eb03855-b753-4788-b9b3-0cc29e3d2891/web/IN-en-20260223-TRIFECTA-perspective_7bcba0fc-d5a5-42f6-b4ed-2ca56a458c61_large.jpg"
+        alt="logo" />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+      </div>
+      <form className=' w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white'>
+      <h1 className="font-bold text-3xl py-4">Sign In</h1>
+      <input  type="text" placeholder="Email address" className="p-2 m-2 w-full"/>
+      <input type="password " placeholder="Enter password" className="p-2 m-2 w-full" />
+      <button className="p-4 m-4 bg-red-700 text-white w-full">
+    Sign In
+      </button>
+      </form>
+    </div>
+  )
+}
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+export default Login;
